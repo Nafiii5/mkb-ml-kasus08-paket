@@ -17,8 +17,8 @@ Pengguna utama sistem ini adalah **staf operasional *hub* Bandung** dan **staf l
 | Baris duplikat pada id_resi | 500 | Dihapus dengan drop_duplicates pada id_resi sehingga tersisa 40.000 resi unik |
 | Nilai jarak_km kosong (NaN) | 813 | Diisi menggunakan median jarak_km per kota_tujuan yang dihitung hanya dari data *train* |
 | Nilai cuaca_saat_pickup kosong (NaN) | 406 | Diisi dengan kategori eksplisit 	idak_diketahui |
-| Nilai erat_kg tidak valid (<= 0) | 81 | Dibuat indikator erat_hilang_flag = 1, diubah menjadi NaN, lalu diisi median erat_kg data *train* |
-| Nilai erat_kg dalam satuan gram (>= 100) | 1,208 | Dikonversi ke kilogram dengan membagi nilai dengan 1.000 |
+| Nilai Berat_kg tidak valid (<= 0) | 81 | Dibuat indikator erat_hilang_flag = 1, diubah menjadi NaN, lalu diisi median erat_kg data *train* |
+| Nilai Berat_kg dalam satuan gram (>= 100) | 1,208 | Dikonversi ke kilogram dengan membagi nilai dengan 1.000 |
 | Inkonsistensi penulisan kota_tujuan & layanan | 40.000 | Dinormalisasi dari 28 variasi kota menjadi 15 kota baku, serta 7 variasi layanan (EXP ke EXPRESS) |
 
 ## Hasil
