@@ -1,0 +1,99 @@
+{
+  "model_name": "GradientBoostingClassifier + Domain Feature Engineering",
+  "baseline_name": "LogisticRegression (Original Features)",
+  "features_num": [
+    "jam_pickup",
+    "jarak_km",
+    "jumlah_transit",
+    "janji_hari",
+    "berat_kg",
+    "volume_hub_hari",
+    "berat_hilang_flag",
+    "hari_minggu",
+    "is_akhir_pekan",
+    "tanggal_bulan",
+    "is_tanggal_kembar",
+    "is_akhir_bulan",
+    "kecepatan_wajib_km_per_hari",
+    "jarak_per_transit",
+    "transit_per_janji_hari",
+    "is_pickup_sore_malam",
+    "is_pickup_malam",
+    "rasio_volume_hub",
+    "is_hub_padat",
+    "is_hujan_lebat",
+    "is_hujan_any",
+    "is_cod",
+    "skor_beban_rute",
+    "interaksi_padat_malam",
+    "interaksi_cuaca_transit",
+    "log_berat_kg"
+  ],
+  "features_cat": [
+    "kota_tujuan",
+    "layanan",
+    "metode_bayar",
+    "cuaca_saat_pickup"
+  ],
+  "imputation_stats": {
+    "kota_jarak_median": {
+      "Balikpapan": 1400.0,
+      "Bekasi": 130.0,
+      "Bogor": 125.0,
+      "Cirebon": 130.0,
+      "Denpasar": 1079.0,
+      "Jakarta": 150.0,
+      "Makassar": 1501.0,
+      "Malang": 720.0,
+      "Medan": 1901.0,
+      "Palembang": 860.0,
+      "Pontianak": 901.0,
+      "Semarang": 370.0,
+      "Surabaya": 691.0,
+      "Tasikmalaya": 110.0,
+      "Yogyakarta": 390.0
+    },
+    "global_jarak_median": 356.0,
+    "global_berat_median": 1.34,
+    "vol_median": 5355.0,
+    "vol_q75": 5907.0
+  },
+  "thresholds": {
+    "kabari_pelanggan": 0.111,
+    "prioritaskan_paket": 0.35,
+    "theoretical_bayes_threshold": 0.0909
+  },
+  "business_costs_idr": {
+    "FN_tanpa_kabar": 50000,
+    "FP_alarm_palsu": 5000
+  },
+  "metrics": {
+    "validation": {
+      "baseline_pr_auc": 0.6455,
+      "final_pr_auc": 0.6556,
+      "final_roc_auc": 0.84,
+      "optimal_threshold_summary": {
+        "threshold": 0.111,
+        "total_cost": 19255000,
+        "avg_cost_per_pkg": 2907.29,
+        "tp": 1279,
+        "fp": 2151,
+        "tn": 3023,
+        "fn": 170
+      }
+    },
+    "test": {
+      "baseline_pr_auc": 0.3563,
+      "final_pr_auc": 0.3665,
+      "final_roc_auc": 0.7559,
+      "total_cost_idr": 22300000,
+      "avg_cost_per_pkg_idr": 3306.64,
+      "confusion_matrix": {
+        "tp": 712,
+        "fp": 2190,
+        "tn": 3615,
+        "fn": 227
+      }
+    }
+  }
+}
