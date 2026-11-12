@@ -30,7 +30,7 @@ Pengguna utama sistem ini adalah **staf operasional *hub* Bandung** dan **staf l
 **Threshold yang dipakai:** **0.111** (notifikasi pelanggan) dan **0.35** (prioritas sortir), karena biaya asimetris bisnis di mana paket terlambat tanpa kabar menimbulkan biaya keluhan **Rp50.000** (10x lebih mahal dari notifikasi keliru **Rp5.000**).
 
 ## Cara menjalankan
-`ash
+`bash
 pip install -r requirements.txt
 uvicorn api.main:app --reload
 streamlit run app/streamlit_app.py
